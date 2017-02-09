@@ -9,5 +9,4 @@ export default (...args) => {
     for(var i = 0, len = length(args); i < len; i++)
     	push(items)(index(args)(i))
 
-    return items
-}
+    return items }

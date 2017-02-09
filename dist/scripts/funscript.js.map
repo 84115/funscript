@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "sources": [
+    "node_modules/browser-pack/_prelude.js",
+    "src/core/apply.js",
+    "src/index.js",
+    "src/list/each.js",
+    "src/list/index.js",
+    "src/list/length.js",
+    "src/list/list.js",
+    "src/list/push.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;;;;;;;kBCAe,kBAAA;SAAU,gBAAA;WAAQ,OAAA,AAAO,iBAAf,AAAQ,AAAmB;AAArC;A;;;;;ACAf;;;;;;;;AAEA,oBAAK,CAAA,AAAC,GAAD,AAAG,GAAR,AAAK,AAAK,IACL,QADL,AACa;;;;;;;;;ACHb;;;;AACA;;;;AACA;;;;;;;;kBAEe,iBAAA;WAAS,kBAAU,AAC9B;aAAI,IAAI,IAAJ,AAAQ,GAAG,MAAM,sBAArB,AAAqB,AAAO,QAAQ,IAApC,AAAwC,KAAxC,AAA6C,KACzC;iCAAA,AAAM,QAAQ,oBAAK,MADvB,AACI,AAAc,AAAK,AAAM;AAAK;AAFvB;A;;;;;;;;;kBCJA,iBAAA;SAAS,iBAAA;WAAS,MAAT,AAAS,AAAM;AAAxB;A;;;;;;;;;kBCAA,kBAAA;SAAU,OAAV,AAAiB;A;;;;;;;;;ACAhC;;;;AACA;;;;AACA;;;;AACA;;;;;;;;kBAEe,YAAa;sCAAT,AAAS,mDAAT;AAAS,+BAAA;AACxB;;QAAI,QAAJ,AAAY,AAEZ;;SAAI,IAAI,IAAJ,AAAQ,GAAG,MAAM,sBAArB,AAAqB,AAAO,OAAO,IAAnC,AAAuC,KAAvC,AAA4C,KAC3C;4BAAA,AAAK,OAAO,qBAAA,AAAM,MADnB,AACC,AAAY,AAAY;AAEzB,YAAA,AAAO,AACV;A;;;;;;;;;kBCZc,iBAAA;WAAS,gBAAQ,AAC5B;cAAA,AAAM,KAAN,AAAW,AACX;eAAA,AAAO,AAAO;AAFH;A",
+  "file": "generated.js",
+  "sourceRoot": "",
+  "sourcesContent": [
+    "(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module '\"+o+\"'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})",
+    "export default method => args => method.apply(this, args)\n",
+    "import each from 'list/each'\n\neach([1,2,3])\n    (console.log)\n",
+    "import apply from '../core/apply'\nimport length from '../list/length'\nimport list from '../list/list'\n\nexport default items => method => {\n    for(var i = 0, len = length(items); i < len; i++)\n        apply(method)(list(items[i]))}\n",
+    "export default array => index => array[index]\n",
+    "export default object => object.length\n",
+    "import list from '../list/list'\nimport push from '../list/push'\nimport index from '../list/index'\nimport length from '../list/length'\n\nexport default (...args) => {\n    let items = []\n\n    for(var i = 0, len = length(args); i < len; i++)\n    \tpush(items)(index(args)(i))\n\n    return items\n}\n",
+    "export default array => item => {\n    array.push(item)\n    return array }\n"
+  ]
+}

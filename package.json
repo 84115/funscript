@@ -1,7 +1,7 @@
 {
-  "name": "phaser-es6-boilerplate",
+  "name": "Funscript",
   "version": "1.0.2",
-  "description": "TJust a hobby project. Trimming JS just down to functions, arguments and let.",
+  "description": "Just a hobby project. Trimming JS just down to functions, arguments and let.",
   "main": "src/index.js",
   "scripts": {
     "start": "gulp",

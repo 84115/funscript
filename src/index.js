@@ -1,3 +1,4 @@
-import each from 'list/each';
+import each from 'list/each'
 
-each([1,2,3])(console.log)
+each([1,2,3])
+    (console.log)

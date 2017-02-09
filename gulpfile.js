@@ -15,7 +15,7 @@ var browserSync = require('browser-sync');
 /**
  * Using different folders/file names? Change these constants:
  */
-var BUILD_PATH = './build';
+var BUILD_PATH = './dist';
 var SCRIPTS_PATH = BUILD_PATH + '/scripts';
 var SOURCE_PATH = './src';
 var STATIC_PATH = './static';
